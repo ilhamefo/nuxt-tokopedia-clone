@@ -46,9 +46,14 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-
+    extend(config, ctx) {
+      config.resolve.alias['vue'] = 'vue/dist/vue.common'
+    }
   },
   tailwind: {
     cssPath: '~/assets/css/tailwind.css',
+  },
+  vue: {
+    runtimeCompiler: true
   }
 }

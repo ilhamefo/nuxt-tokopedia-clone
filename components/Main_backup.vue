@@ -16,7 +16,7 @@
             <a
               href="#"
               class="flex items-center py-1 px-4 my-3 ml-3 rounded-full border text-gray-500"
-              v-for="i in 5"
+              v-for="i in 12"
               :key="i"
             >
               <img

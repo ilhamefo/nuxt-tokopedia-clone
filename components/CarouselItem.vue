@@ -1,19 +1,26 @@
 <template>
-  <no-ssr>
+  <client-only>
     <div class="z-3">
       <carousel :data="carouseldata" indicator-type="disc"></carousel>
+      <!-- {{ carouseldata }} -->
     </div>
-  </no-ssr>
+  </client-only>
 </template>
 
 <script>
 export default {
   data() {
     return {
+      // testdata: [
+      //   require("~/assets/images/carousel1.png"),
+      //   require("~/assets/images/carousel-2.jpg"),
+      //   require("~/assets/images/carousel3.jpg"),
+      // ].forEach(function (el) {
+      //   this.content(createElement, content){};
+      // }),
       carouseldata: [
         {
           id: 1,
-          message: "First message",
           content(createElement, content) {
             return createElement("img", {
               attrs: {
@@ -25,7 +32,6 @@ export default {
         },
         {
           id: 2,
-          message: "Any message",
           content(createElement, content) {
             return createElement("img", {
               attrs: {
@@ -37,7 +43,6 @@ export default {
         },
         {
           id: 3,
-          message: "Any message",
           content(createElement, content) {
             return createElement("img", {
               attrs: {
